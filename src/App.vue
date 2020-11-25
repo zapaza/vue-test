@@ -1,32 +1,97 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<div class="container" id="app">
+  <div class="content" >
+
+    <header class="header">
+      <div class="wrapper">
+        <Menu/>
+      </div>
+    </header>
+
     <router-view/>
+
+  </div>
+  <footer class="footer">
+      <div class="wrapper"> 
+          <Menu/>
+          <ul class="social">
+            <li class="social__item">
+                <a href="" target="_blank" rel="noopenner" class="social__link" title="Вконтакте"></a>
+            </li>
+            <li class="social__item">
+                <a href="" target="_blank" rel="noopenner" class="social__link" title="Telegram"></a>
+            </li>
+            <li class="social__item">
+                <a href="" target="_blank" rel="noopenner" class="social__link" title="Instagram"></a>
+            </li>
+          </ul>
+        </div>
+    </footer>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import Menu from '@/components/Menu.vue'
+  export default {
+  name: 'default',
+  components: {
+    Menu
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
+<style  lang="scss">
+.header, .footer{
+  width: 100%;
+  padding: 16px 0;
+  background-color: $black;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  .menu {
+    &__list {
+      display: flex;
+      list-style:none;
+    }
+    &__item {
+      margin-right: 24px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    &__link {
+      @include transition();
+      text-decoration: none;
+      color: $white;
+      font-size: 16px;
+      line-height: 1.44;
+      &:hover {
+        color: $gray;
+      }
     }
   }
 }
+
+.footer {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social {
+    display: flex;
+    list-style: none;
+
+    &__item {
+      margin-left: 24px;
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+    &__link {
+      width: 24px;
+      height: 24px;
+      display: block;
+      border: 1px solid $gray
+    }
+  }
+}
+
 </style>
