@@ -1,5 +1,6 @@
 dependencies:
   core-js: 3.8.0
+  velocity-animate: 1.5.2
   vue: 2.6.12
   vue-router: 3.4.9
   vue-yandex-maps: 0.10.9
@@ -8984,6 +8985,10 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+  /velocity-animate/1.5.2:
+    dev: false
+    resolution:
+      integrity: sha512-m6EXlCAMetKztO1ppBhGU1/1MR3IiEevO6ESq6rcrSQ3Q77xYSW13jkfXW88o4xMrkXJhy/U7j4wFR/twMB0Eg==
   /vendors/1.0.4:
     dev: true
     resolution:
@@ -9464,6 +9469,7 @@ specifiers:
   node-sass: ^4.12.0
   sass-loader: ^8.0.2
   style-resources-loader: ^1.4.1
+  velocity-animate: ^1.5.2
   vue: ^2.6.11
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
